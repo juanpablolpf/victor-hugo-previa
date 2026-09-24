@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Victor Hugo Restô | Parquelândia, Fortaleza</title>
+<meta name="description" content="Victor Hugo Restô: carnes e pizzas na Parquelândia, com música ao vivo às sextas e sábados. Rua General Piragibe, 286, Fortaleza.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik:wght@400;500;700&display=swap">
+<style>
+  :root {
+    color-scheme: dark;
+    --ground: #1C1916;
+    --ground-2: #26221E;
+    --ink: #F5EFE6;
+    --muted: #BDB3A6;
+    --line: #3A342D;
+    --yellow: #F4C430;
+    --yellow-ink: #1C1916;
+    --red: #E2483D;
+    --display: "Anton", "Impact", "Arial Narrow", sans-serif;
+    --body: "Rubik", "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.6; }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  :focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 400; line-height: 1; text-transform: uppercase; letter-spacing: .01em; text-wrap: balance; }
+  .wrap { max-width: 1160px; margin-inline: auto; padding-inline: 24px; }
+
+  .preview-bar { background: var(--yellow); color: var(--yellow-ink); text-align: center; font-size: .88rem; font-weight: 500; padding: 8px 16px; line-height: 1.4; }
+
+  .top { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--ground) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 12px; }
+  .logo { font-family: var(--display); font-size: 1.6rem; text-transform: uppercase; text-decoration: none; color: var(--yellow); }
+  .top nav { display: flex; align-items: center; gap: 24px; }
+  .top nav a { text-decoration: none; color: var(--muted); font-size: .98rem; }
+  .top nav a:hover { color: var(--ink); }
+  .btn { display: inline-block; text-decoration: none; font-weight: 700; font-size: 1rem; padding: 12px 22px; border-radius: 8px; background: var(--yellow); color: var(--yellow-ink); border: 2px solid var(--yellow); }
+  .btn:hover { filter: brightness(1.06); }
+  .btn-line { background: transparent; color: var(--ink); border-color: var(--line); }
+  .btn-line:hover { border-color: var(--yellow); filter: none; }
+  .top nav .btn { color: var(--yellow-ink); padding: 8px 16px; font-size: .95rem; }
+  .menu-toggle { display: none; background: none; border: 2px solid var(--line); color: var(--ink); border-radius: 8px; padding: 6px 14px; font: inherit; font-weight: 500; font-size: .95rem; cursor: pointer; }
+  @media (max-width: 760px) {
+    .menu-toggle { display: inline-block; }
+    .top nav { position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; background: var(--ground); border-bottom: 1px solid var(--line); padding: 8px 24px 20px; }
+    .top nav a { padding-block: 12px; border-bottom: 1px solid var(--line); font-size: 1.05rem; }
+    .top nav .btn { margin-top: 16px; text-align: center; border-bottom: 2px solid var(--yellow); padding: 12px; }
+  }
+
+  .hero { display: grid; grid-template-columns: 1fr; gap: 40px; padding-block: 52px 76px; }
+  @media (min-width: 940px) { .hero { grid-template-columns: 6fr 5fr; align-items: center; padding-block: 80px 104px; } }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+  .tags span { font-size: .9rem; font-weight: 500; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); }
+  .tags span.live { border-color: var(--red); color: var(--ink); }
+  .tags span.live::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--red); margin-right: 8px; vertical-align: middle; }
+  .hero h1 { font-size: clamp(3rem, 8vw, 6rem); margin-bottom: 22px; }
+  .hero h1 em { font-style: normal; color: var(--yellow); }
+  .hero .lede { color: var(--muted); font-size: 1.18rem; max-width: 30em; margin-bottom: 30px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .hero-photo { position: relative; }
+  .hero-photo img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 16px; }
+  .hero-photo .badge { position: absolute; left: -12px; bottom: 24px; background: var(--red); color: #fff; font-family: var(--display); font-size: 1.4rem; text-transform: uppercase; padding: 10px 16px; border-radius: 8px; transform: rotate(-3deg); }
+
+  section.block { padding-block: 84px; border-top: 1px solid var(--line); }
+  .block h2.title { font-size: clamp(2.4rem, 5.4vw, 4rem); margin-bottom: 14px; }
+  .block .intro { color: var(--muted); max-width: 38em; margin-bottom: 36px; }
+
+  .photos { list-style: none; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  @media (min-width: 820px) { .photos { grid-template-columns: repeat(4, 1fr); gap: 14px; } }
+  .photos li { border-radius: 14px; overflow: hidden; }
+  .photos img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+  .credit { margin-top: 14px; font-size: .85rem; color: var(--muted); }
+
+  .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; }
+  .tabs button { font: inherit; font-weight: 500; font-size: .98rem; cursor: pointer; padding: 9px 16px; border-radius: 8px; background: var(--ground-2); color: var(--muted); border: 1px solid var(--line); }
+  .tabs button[aria-selected="true"] { background: var(--yellow); color: var(--yellow-ink); border-color: var(--yellow); }
+  .dishes { list-style: none; display: grid; grid-template-columns: 1fr; gap: 0 48px; }
+  @media (min-width: 820px) { .dishes { grid-template-columns: 1fr 1fr; } }
+  .dishes li { padding-block: 16px; border-bottom: 1px solid var(--line); }
+  .dishes h3 { font-size: 1.45rem; margin-bottom: 4px; }
+  .dishes p { color: var(--muted); max-width: 32em; }
+  .menu-cta { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .menu-cta p { color: var(--muted); font-size: .95rem; }
+
+  .nights { display: grid; grid-template-columns: 1fr; gap: 16px; }
+  @media (min-width: 820px) { .nights { grid-template-columns: repeat(3, 1fr); } }
+  .nights div { background: var(--ground-2); border-radius: 16px; padding: 26px; border-top: 4px solid var(--yellow); }
+  .nights div:nth-child(2) { border-top-color: var(--red); }
+  .nights h3 { font-size: 1.8rem; margin-bottom: 8px; }
+  .nights p { color: var(--muted); }
+
+  .visit { display: grid; grid-template-columns: 1fr; gap: 40px; }
+  @media (min-width: 900px) { .visit { grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; } }
+  .address { font-family: var(--display); text-transform: uppercase; font-size: clamp(1.8rem, 3.6vw, 2.6rem); line-height: 1.05; margin-bottom: 14px; }
+  .phone { color: var(--muted); margin-bottom: 22px; }
+  .phone a { color: var(--yellow); font-weight: 700; text-underline-offset: 4px; }
+  .open-card { background: var(--ground-2); border-radius: 16px; padding: 28px; }
+  .open-card strong { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: 2.2rem; color: var(--yellow); display: block; line-height: 1; margin-bottom: 10px; }
+  .open-card p { color: var(--muted); }
+  .map { margin-top: 44px; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); }
+  .map iframe { display: block; width: 100%; height: clamp(280px, 45vw, 420px); border: 0; }
+
+  footer { border-top: 1px solid var(--line); padding-block: 28px 40px; color: var(--muted); font-size: .92rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+  @media (max-width: 480px) { .wrap { padding-inline: 16px; } .hero-photo .badge { left: 8px; } .actions .btn { flex: 1 1 auto; text-align: center; } }
+</style>
+</head>
+<body>
+  <div class="preview-bar">Proposta de site para o Victor Hugo Restô, criada por Juan Filho. Aguardando aprovação.</div>
+  <header class="top">
+    <div class="wrap">
+      <a class="logo" href="#inicio">Victor Hugo</a>
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" aria-label="Seções">
+        <a href="#cardapio">Cardápio</a>
+        <a href="#noites">Música ao vivo</a>
+        <a href="#visite">Visite</a>
+        <a class="btn" href="https://wa.me/5585998392039" target="_blank" rel="noopener">WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <div class="wrap hero">
+      <div>
+        <div class="tags"><span class="live">Música ao vivo sex e sáb</span><span>Aberto todos os dias</span><span>Espaço kids</span></div>
+        <h1>Carnes e <em>pizzas</em> na Parquelândia</h1>
+        <p class="lede">Picanha na chapa, carne de sol completa, pratos para dividir, espetinhos e pizzas, no almoço e à noite, com música ao vivo no fim de semana.</p>
+        <div class="actions">
+          <a class="btn" href="https://wa.me/5585998392039" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+          <a class="btn btn-line" href="https://app.cardapioweb.com/victor_hugo_carnes_e_pizzas" target="_blank" rel="noopener">Pedir delivery</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="fotos/picanha-chapa.jpg" alt="Carne fatiada chiando numa chapa de ferro" width="480" height="640">
+        <span class="badge">Direto da chapa</span>
+      </div>
+    </div>
+
+    <section class="block" aria-label="Fotos do Victor Hugo">
+      <div class="wrap">
+        <ul class="photos">
+          <li><img src="fotos/executivos.jpg" alt="Quatro pratos executivos com arroz, salada, batata frita e carnes" width="512" height="640" loading="lazy"></li>
+          <li><img src="fotos/prato-carne.jpg" alt="Prato com carne, queijo coalho, batata frita, salada e acompanhamentos" width="360" height="640" loading="lazy"></li>
+          <li><img src="fotos/caranguejo.jpg" alt="Caranguejos e frutos do mar em molho alaranjado" width="557" height="640" loading="lazy"></li>
+          <li><img src="fotos/bolinhos.jpg" alt="Bolinhos fritos com molho rosé" width="630" height="640" loading="lazy"></li>
+        </ul>
+        <p class="credit">Fotos: <a href="https://www.instagram.com/victorhugoresto/" target="_blank" rel="noopener">@victorhugoresto</a></p>
+      </div>
+    </section>
+
+    <section id="cardapio" class="block">
+      <div class="wrap">
+        <h2 class="title">Cardápio</h2>
+        <p class="intro">Uma seleção do cardápio. Pratos executivos individuais no almoço e pratos que servem duas pessoas.</p>
+        <div class="tabs" role="tablist" aria-label="Partes do cardápio">
+          <button role="tab" id="t1" aria-controls="c1" aria-selected="true">Para dividir</button>
+          <button role="tab" id="t2" aria-controls="c2" aria-selected="false" tabindex="-1">Executivos</button>
+          <button role="tab" id="t3" aria-controls="c3" aria-selected="false" tabindex="-1">Regionais</button>
+          <button role="tab" id="t4" aria-controls="c4" aria-selected="false" tabindex="-1">Espetos e petiscos</button>
+        </div>
+        <div role="tabpanel" id="c1" aria-labelledby="t1">
+          <ul class="dishes">
+            <li><h3>Picanha argentina</h3><p>Com baião, batata frita, farofa e vinagrete. Serve duas pessoas.</p></li>
+            <li><h3>Carne de sol completa</h3><p>Com baião, queijo, macaxeira e farofa.</p></li>
+            <li><h3>Maminha acebolada</h3><p>Trinchada, com baião, batata frita, farofa e vinagrete.</p></li>
+            <li><h3>Filé mignon ao medalhão</h3><p>Com arroz branco e purê de batatas.</p></li>
+            <li><h3>Salmão ao molho de alcaparras</h3><p>Com arroz branco e purê de batatas.</p></li>
+            <li><h3>Risoto de camarão</h3><p>Também tem espaguete à carbonara, à bolonhesa e ao molho de camarão.</p></li>
+          </ul>
+        </div>
+        <div role="tabpanel" id="c2" aria-labelledby="t2" hidden>
+          <ul class="dishes">
+            <li><h3>Maminha trinchada</h3><p>Com baião e batata frita.</p></li>
+            <li><h3>Carne de sol</h3><p>Com baião e macaxeira.</p></li>
+            <li><h3>Frango à parmegiana</h3><p>Com arroz branco e batata frita.</p></li>
+            <li><h3>Filé de peixe com ervas finas</h3><p>Com arroz branco e salada.</p></li>
+          </ul>
+        </div>
+        <div role="tabpanel" id="c3" aria-labelledby="t3" hidden>
+          <ul class="dishes">
+            <li><h3>Feijoada</h3><p>Com arroz branco e farofa. Serve duas pessoas.</p></li>
+            <li><h3>Panelada</h3><p>Com arroz branco e farofa.</p></li>
+            <li><h3>Tilápia Beach</h3><p>Com baião e batata frita crocante.</p></li>
+          </ul>
+        </div>
+        <div role="tabpanel" id="c4" aria-labelledby="t4" hidden>
+          <ul class="dishes">
+            <li><h3>Espetinhos</h3><p>Maminha, frango, suíno ou queijo coalho com melaço, com farofa e vinagrete.</p></li>
+            <li><h3>Casquinha do chefe</h3><p>Tradicional ou de calabresa.</p></li>
+            <li><h3>Camarão alho e óleo</h3><p>Porção de 300 g.</p></li>
+            <li><h3>Bolinha de peixe e macaxeira crocante</h3><p>Para beliscar com a turma.</p></li>
+          </ul>
+        </div>
+        <div class="menu-cta">
+          <a class="btn" href="https://app.cardapioweb.com/victor_hugo_carnes_e_pizzas" target="_blank" rel="noopener">Ver cardápio completo e pedir</a>
+          <p>Delivery também pelo <a href="https://www.ifood.com.br/delivery/fortaleza-ce/victor-hugo-pizzaria-parquelandia/0cc10cb0-a6de-43b7-ae82-263b7b957460" target="_blank" rel="noopener">iFood</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="noites" class="block">
+      <div class="wrap">
+        <h2 class="title">Na casa</h2>
+        <div class="nights">
+          <div><h3>Música ao vivo</h3><p>Toda sexta e todo sábado.</p></div>
+          <div><h3>Happy hour</h3><p>Cerveja gelada e espeto para fechar o dia.</p></div>
+          <div><h3>Espaço kids</h3><p>Para a família inteira ficar à vontade.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visite" class="block">
+      <div class="wrap visit">
+        <div>
+          <h2 class="title">Visite</h2>
+          <p class="address">Rua General Piragibe, 286<br>Parquelândia, Fortaleza</p>
+          <p class="phone">WhatsApp: <a href="https://wa.me/5585998392039" target="_blank" rel="noopener">(85) 99839-2039</a></p>
+          <div class="actions">
+            <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=Victor+Hugo+Carnes+e+Pizzas%2C+Rua+General+Piragibe%2C+286%2C+Parquel%C3%A2ndia%2C+Fortaleza+-+CE" target="_blank" rel="noopener">Como chegar</a>
+            <a class="btn btn-line" href="https://wa.me/5585998392039" target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="open-card">
+          <strong>Aberto todos os dias</strong>
+          <p>Almoço com pratos executivos e noite com carnes, pizzas e música ao vivo às sextas e sábados. Confirme o horário do dia pelo WhatsApp.</p>
+        </div>
+      </div>
+      <div class="wrap">
+        <div class="map"><iframe title="Mapa com a localização do Victor Hugo" src="https://www.google.com/maps?q=Victor+Hugo+Carnes+e+Pizzas,+Rua+General+Piragibe,+286,+Parquel%C3%A2ndia,+Fortaleza+-+CE&output=embed" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><span>Victor Hugo Restô</span><span>Rua General Piragibe, 286, Parquelândia, Fortaleza</span></div></footer>
+  <script src="site.js"></script>
+</body>
+</html>
